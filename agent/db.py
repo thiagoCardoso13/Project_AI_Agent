@@ -1,4 +1,4 @@
-"""Carrega todos os CSVs de uma pasta no DuckDB (uma tabela por arquivo)."""
+"""Load every CSV in a folder into DuckDB (one table per file)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -10,15 +10,15 @@ DEFAULT_DATA_DIR = Path(__file__).resolve().parent.parent / "demo_data"
 
 
 def load_database(data_dir: Path | str = DEFAULT_DATA_DIR) -> duckdb.DuckDBPyConnection:
-    """Cria um banco em memória com uma tabela (view) para cada CSV da pasta.
+    """Create an in-memory database with one table per CSV in the folder.
 
-    O nome da tabela é o nome do arquivo sem a extensão, então para trocar ou
-    acrescentar dados basta colocar outro CSV na pasta.
+    The table name is the file name without the extension, so to swap or add
+    data you just drop another CSV into the folder.
     """
     data_dir = Path(data_dir)
     csvs = sorted(data_dir.glob("*.csv"))
     if not csvs:
-        raise FileNotFoundError(f"Nenhum CSV encontrado em {data_dir}")
+        raise FileNotFoundError(f"No CSV files found in {data_dir}")
 
     con = duckdb.connect(":memory:")
     for csv in csvs:
@@ -42,7 +42,7 @@ def list_tables(con: duckdb.DuckDBPyConnection) -> pd.DataFrame:
 def describe_table(con: duckdb.DuckDBPyConnection, table: str, sample_rows: int = 3) -> dict:
     valid = {r[0] for r in con.execute("SHOW TABLES").fetchall()}
     if table not in valid:
-        raise ValueError(f"Tabela '{table}' não existe. Tabelas disponíveis: {sorted(valid)}")
+        raise ValueError(f"Table '{table}' does not exist. Available tables: {sorted(valid)}")
     cols = con.execute(f'DESCRIBE "{table}"').fetchdf()[["column_name", "column_type"]]
     sample = con.execute(f'SELECT * FROM "{table}" LIMIT {int(sample_rows)}').fetchdf()
     return {"columns": cols, "sample": sample}

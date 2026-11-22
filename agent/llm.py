@@ -1,11 +1,11 @@
-"""Fábrica de modelos: o provedor é escolhido por variável de ambiente."""
+"""Model factory: the provider is chosen via environment variable."""
 from __future__ import annotations
 
 import os
 
 from dotenv import load_dotenv
 
-load_dotenv()  # lê o arquivo .env da pasta do projeto, se existir
+load_dotenv()  # loads the project's .env file, if present
 
 DEFAULTS = {
     "gemini": "gemini-3.5-flash",
@@ -16,7 +16,7 @@ DEFAULTS = {
 
 
 def get_setting(name: str, default: str | None = None) -> str | None:
-    """Lê de variável de ambiente e, se existir, dos secrets do Streamlit."""
+    """Read from an environment variable and, if present, from Streamlit secrets."""
     if os.getenv(name):
         return os.getenv(name)
     try:
@@ -29,12 +29,12 @@ def get_setting(name: str, default: str | None = None) -> str | None:
     return default
 
 
-# Modelos de reserva: cada um tem cota gratuita própria, então se um estourar o limite o agente usa o próximo.
+# Fallback models: each has its own free quota, so if one hits its limit the agent uses the next.
 GEMINI_FALLBACKS = ["gemini-3.6-flash", "gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
 
 
 def get_fallback_llms() -> list:
-    """Modelos alternativos (mesmo provedor) usados quando o principal falha, ex.: cota esgotada."""
+    """Alternative models (same provider) used when the main one fails, e.g. quota exhausted."""
     provider = (get_setting("LLM_PROVIDER", "gemini") or "gemini").lower()
     if provider != "gemini":
         return []
@@ -74,4 +74,4 @@ def get_llm(model: str | None = None):
         from langchain_ollama import ChatOllama
 
         return ChatOllama(model=model, temperature=0)
-    raise ValueError(f"LLM_PROVIDER desconhecido: {provider}")
+    raise ValueError(f"Unknown LLM_PROVIDER: {provider}")

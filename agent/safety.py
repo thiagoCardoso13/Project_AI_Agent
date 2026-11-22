@@ -1,4 +1,4 @@
-"""Validação de SQL: o agente só pode ler dados (SELECT / WITH)."""
+"""SQL validation: the agent may only read data (SELECT / WITH)."""
 from __future__ import annotations
 
 import re
@@ -30,19 +30,19 @@ def _strip_literals_and_comments(sql: str) -> str:
 
 
 def validate_select(sql: str) -> str:
-    """Devolve o SQL limpo ou levanta UnsafeSQLError."""
+    """Return the cleaned SQL or raise UnsafeSQLError."""
     if not sql or not sql.strip():
-        raise UnsafeSQLError("SQL vazio.")
+        raise UnsafeSQLError("Empty SQL.")
 
     cleaned = _strip_literals_and_comments(sql).strip().rstrip(";").strip()
 
     if ";" in cleaned:
-        raise UnsafeSQLError("Apenas uma instrução por vez é permitida.")
+        raise UnsafeSQLError("Only one statement at a time is allowed.")
     if not re.match(r"^(select|with)\b", cleaned, re.IGNORECASE):
-        raise UnsafeSQLError("Apenas consultas SELECT (ou WITH ... SELECT) são permitidas.")
+        raise UnsafeSQLError("Only SELECT queries (or WITH ... SELECT) are allowed.")
     if (m := _FORBIDDEN.search(cleaned)):
-        raise UnsafeSQLError(f"Comando proibido no SQL: {m.group(1).upper()}. O agente é somente leitura.")
+        raise UnsafeSQLError(f"Forbidden command in SQL: {m.group(1).upper()}. The agent is read-only.")
     if _FILE_FUNCS.search(cleaned):
-        raise UnsafeSQLError("Leitura direta de arquivos não é permitida; use as tabelas carregadas.")
+        raise UnsafeSQLError("Reading files directly is not allowed; use the loaded tables.")
 
     return sql.strip().rstrip(";").strip()

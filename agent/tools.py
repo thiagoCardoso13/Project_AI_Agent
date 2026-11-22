@@ -1,4 +1,4 @@
-"""Ferramentas do agente (listar_tabelas, descrever_tabela, executar_sql, criar_grafico)."""
+"""Agent tools: list_tables, describe_table, execute_sql, create_chart."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -8,7 +8,8 @@ import duckdb
 import pandas as pd
 from langchain_core.tools import tool
 
-from .db import describe_table, list_tables
+from .db import describe_table as _describe_table
+from .db import list_tables as _list_tables
 from .safety import MAX_ROWS, UnsafeSQLError, validate_select
 
 CHART_TYPES = ("line", "bar", "pie")
@@ -32,7 +33,7 @@ class ChartSpec:
 
 @dataclass
 class SessionContext:
-    """Estado fora das mensagens: resultados e gráficos que a interface precisa exibir."""
+    """State kept outside the messages: results and charts the UI needs to display."""
 
     con: duckdb.DuckDBPyConnection
     queries: list[QueryRecord] = field(default_factory=list)
@@ -47,67 +48,67 @@ def _df_to_text(df: pd.DataFrame, limit: int = 30) -> str:
     shown = df.head(limit)
     text = shown.to_csv(index=False)
     if len(df) > limit:
-        text += f"... ({len(df) - limit} linhas omitidas neste texto; total {len(df)})"
+        text += f"... ({len(df) - limit} rows omitted from this text; total {len(df)})"
     return text
 
 
 def build_tools(ctx: SessionContext) -> list:
     @tool
-    def listar_tabelas() -> str:
-        """Lista as tabelas carregadas e quantas linhas cada uma tem. Use SEMPRE primeiro."""
-        return _df_to_text(list_tables(ctx.con))
+    def list_tables() -> str:
+        """List the loaded tables and how many rows each has. ALWAYS use this first."""
+        return _df_to_text(_list_tables(ctx.con))
 
     @tool
-    def descrever_tabela(nome_tabela: str) -> str:
-        """Mostra colunas, tipos e 3 linhas de exemplo de uma tabela. Use antes de escrever SQL."""
+    def describe_table(table_name: str) -> str:
+        """Show the columns, types and 3 sample rows of a table. Use it before writing SQL."""
         try:
-            info = describe_table(ctx.con, nome_tabela)
+            info = _describe_table(ctx.con, table_name)
         except ValueError as e:
-            return f"ERRO: {e}"
+            return f"ERROR: {e}"
         return (
-            f"Colunas de {nome_tabela}:\n{_df_to_text(info['columns'], 100)}\n"
-            f"Exemplo:\n{_df_to_text(info['sample'])}"
+            f"Columns of {table_name}:\n{_df_to_text(info['columns'], 100)}\n"
+            f"Sample:\n{_df_to_text(info['sample'])}"
         )
 
     @tool
-    def executar_sql(consulta: str) -> str:
-        """Executa uma consulta SELECT (dialeto DuckDB) e devolve o resultado.
-        Somente leitura. Se der erro, leia a mensagem, corrija o SQL e tente de novo."""
+    def execute_sql(query: str) -> str:
+        """Run a SELECT query (DuckDB dialect) and return the result.
+        Read-only. If it fails, read the message, fix the SQL and try again."""
         try:
-            sql = validate_select(consulta)
+            sql = validate_select(query)
             df = ctx.con.execute(sql).fetchdf()
         except UnsafeSQLError as e:
-            return f"ERRO DE SEGURANÇA: {e}"
-        except Exception as e:  # erros do DuckDB (coluna inexistente, sintaxe, tipo...)
-            return f"ERRO NO SQL: {e}\nCorrija a consulta e tente novamente."
+            return f"SECURITY ERROR: {e}"
+        except Exception as e:  # DuckDB errors (missing column, syntax, type...)
+            return f"SQL ERROR: {e}\nFix the query and try again."
 
         truncated = len(df) > MAX_ROWS
         if truncated:
             df = df.head(MAX_ROWS)
         ctx.queries.append(QueryRecord(sql=sql, df=df, truncated=truncated))
-        note = f"\n(resultado limitado a {MAX_ROWS} linhas)" if truncated else ""
-        return f"{len(df)} linhas.\n{_df_to_text(df)}{note}"
+        note = f"\n(result limited to {MAX_ROWS} rows)" if truncated else ""
+        return f"{len(df)} rows.\n{_df_to_text(df)}{note}"
 
     @tool
-    def criar_grafico(tipo: str, coluna_x: str, coluna_y: str, titulo: str, coluna_cor: str = "") -> str:
-        """Cria um gráfico a partir do ÚLTIMO resultado de executar_sql.
-        tipo: 'line' (séries no tempo), 'bar' (categorias) ou 'pie' (partes de um todo, poucas categorias).
-        coluna_x e coluna_y devem existir no resultado; coluna_cor (opcional) separa séries."""
+    def create_chart(chart_type: str, x_column: str, y_column: str, title: str, color_column: str = "") -> str:
+        """Create a chart from the LAST execute_sql result.
+        chart_type: 'line' (time series), 'bar' (categories) or 'pie' (parts of a whole, few categories).
+        x_column and y_column must exist in the result; color_column (optional) splits series."""
         last = ctx.last_query
         if last is None:
-            return "ERRO: rode executar_sql antes de criar um gráfico."
-        if tipo not in CHART_TYPES:
-            return f"ERRO: tipo deve ser um de {CHART_TYPES}."
+            return "ERROR: run execute_sql before creating a chart."
+        if chart_type not in CHART_TYPES:
+            return f"ERROR: chart_type must be one of {CHART_TYPES}."
         cols = set(last.df.columns)
-        for c in (coluna_x, coluna_y) + ((coluna_cor,) if coluna_cor else ()):
+        for c in (x_column, y_column) + ((color_column,) if color_column else ()):
             if c not in cols:
-                return f"ERRO: coluna '{c}' não está no resultado. Colunas: {sorted(cols)}"
+                return f"ERROR: column '{c}' is not in the result. Columns: {sorted(cols)}"
         ctx.charts.append(
-            (ChartSpec(tipo, coluna_x, coluna_y, titulo, coluna_cor or None), last.df.copy())
+            (ChartSpec(chart_type, x_column, y_column, title, color_column or None), last.df.copy())
         )
-        return "Gráfico criado e será exibido ao usuário."
+        return "Chart created; it will be shown to the user."
 
-    return [listar_tabelas, descrever_tabela, executar_sql, criar_grafico]
+    return [list_tables, describe_table, execute_sql, create_chart]
 
 
 def build_figure(spec: ChartSpec, df: pd.DataFrame) -> Any:

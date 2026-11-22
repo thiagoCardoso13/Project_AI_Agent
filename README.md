@@ -14,26 +14,26 @@ The agent is a **custom LangGraph graph** (`StateGraph`), not an off-the-shelf a
 
 ```mermaid
 graph TD;
-    start([start]) --> entrada
-    entrada --> agente
-    agente -- "answers" --> done([end])
-    agente -- "calls a tool" --> validar
-    validar -- "SQL blocked" --> agente
-    validar -- "ok" --> executar
-    executar -- "result or error" --> agente
-    executar -- "3 errors in a row" --> desistir
-    desistir --> done
+    start([start]) --> intake
+    intake --> agent
+    agent -- "answers" --> done([end])
+    agent -- "calls a tool" --> validate
+    validate -- "SQL blocked" --> agent
+    validate -- "ok" --> execute
+    execute -- "result or error" --> agent
+    execute -- "3 errors in a row" --> give_up
+    give_up --> done
 ```
 
 | Node | What it does |
 |---|---|
-| `entrada` (entry) | Starts a new turn (resets the error counter; conversation memory is kept) |
-| `agente` (agent) | The model decides which tool to call, or answers the user |
-| `validar` (validate) | **Blocks any SQL that is not a `SELECT`** before it ever touches the database |
-| `executar` (execute) | Runs the tools; SQL errors go back to the model, which **self-corrects** (up to 2 retries) |
-| `desistir` (give up) | Answers honestly when it can't reach a valid query |
+| `intake` | Starts a new turn (resets the error counter; conversation memory is kept) |
+| `agent` | The model decides which tool to call, or answers the user |
+| `validate` | **Blocks any SQL that is not a `SELECT`** before it ever touches the database |
+| `execute` | Runs the tools; SQL errors go back to the model, which **self-corrects** (up to 2 retries) |
+| `give_up` | Answers honestly when it can't reach a valid query |
 
-**Agent tools:** `listar_tabelas` (list tables), `descrever_tabela` (describe a table), `executar_sql` (run SQL), `criar_grafico` (create chart).
+**Agent tools:** `list_tables`, `describe_table`, `execute_sql`, `create_chart`.
 
 ### Engineering highlights
 - 🛡️ **Read-only by design:** allowlist validation (only `SELECT`/`WITH`), one statement at a time, no file access through SQL. Covered by tests.

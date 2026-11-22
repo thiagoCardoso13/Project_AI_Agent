@@ -5,22 +5,22 @@ config:
 ---
 graph TD;
 	__start__([<p>__start__</p>]):::first
-	entrada(entrada)
-	agente(agente)
-	validar(validar)
-	executar(executar)
-	desistir(desistir)
+	intake(intake)
+	agent(agent)
+	validate(validate)
+	execute(execute)
+	give_up(give_up)
 	__end__([<p>__end__</p>]):::last
-	__start__ --> entrada;
-	agente -.-> __end__;
-	agente -.-> validar;
-	entrada --> agente;
-	executar -.-> agente;
-	executar -.-> desistir;
-	validar -.-> agente;
-	validar -.-> desistir;
-	validar -.-> executar;
-	desistir --> __end__;
+	__start__ --> intake;
+	agent -.-> __end__;
+	agent -.-> validate;
+	execute -.-> agent;
+	execute -.-> give_up;
+	intake --> agent;
+	validate -.-> agent;
+	validate -.-> execute;
+	validate -.-> give_up;
+	give_up --> __end__;
 	classDef default fill:#f2f0ff,line-height:1.2
 	classDef first fill-opacity:0
 	classDef last fill:#bfb6fc
