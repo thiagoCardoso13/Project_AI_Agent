@@ -5,8 +5,22 @@ Ask a question in plain language ("which category has the highest profit margin?
 
 Built with **Python · LangGraph · DuckDB · Streamlit · Plotly**. Works with any LLM provider (Gemini, Groq, OpenRouter, Ollama).
 
-<!-- Replace with the published demo link and add a GIF/screenshots here -->
+<!-- Replace with the published demo link -->
 > 🔗 **Live demo:** _coming soon_  ·  🎥 **Video:** _coming soon_
+
+## Screenshots
+
+Real captures of the app answering "Which category has the highest profit margin?" with `gemini-3.5-flash`.
+
+![Home screen: example questions and the loaded tables](docs/screenshots/home.jpg)
+
+| Chart | SQL it ran |
+|---|---|
+| ![Bar chart of profit margin by category](docs/screenshots/chart.jpg) | ![The SQL query behind the answer](docs/screenshots/sql.jpg) |
+
+Every answer comes with a timeline of the tools the agent used (which tables it inspected, the query, the chart), so you can see how it got there:
+
+![Tool timeline: list_tables, describe_table, execute_sql, create_chart](docs/screenshots/timeline.jpg)
 
 ## How it works
 
