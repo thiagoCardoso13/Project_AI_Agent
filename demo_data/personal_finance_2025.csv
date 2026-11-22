@@ -1,0 +1,655 @@
+date,description,category,amount_eur,balance_eur
+2025-01-01,Monthly salary,Salary,2950,6150.0
+2025-01-01,Apartment rent,Rent,-850,5300.0
+2025-01-01,Electricity,Utilities,-91.33,5208.67
+2025-01-01,Internet & Mobile,Utilities,-45,5163.67
+2025-01-01,Netflix,Subscriptions,-12.99,5150.68
+2025-01-01,Spotify,Subscriptions,-10.99,5139.69
+2025-01-01,Gym,Subscriptions,-35,5104.69
+2025-01-02,Glovo,Food Delivery,-33.24,5071.45
+2025-01-02,Cinema,Entertainment,-17.24,5054.21
+2025-01-03,Mercadona,Groceries,-59.46,4994.75
+2025-01-03,Repsol,Fuel,-66.64,4928.11
+2025-01-05,Uber,Transport,-10.02,4918.09
+2025-01-06,Mercadona,Groceries,-101.34,4816.75
+2025-01-06,Burger Place,Restaurants,-18.99,4797.76
+2025-01-06,Glovo,Food Delivery,-15.18,4782.58
+2025-01-07,Mercadona,Groceries,-58.47,4724.11
+2025-01-07,Metro Card,Transport,-29.36,4694.75
+2025-01-07,Uber,Transport,-21.94,4672.81
+2025-01-07,Repsol,Fuel,-47.87,4624.94
+2025-01-07,Amazon,Shopping,-76.73,4548.21
+2025-01-08,Burger Place,Restaurants,-18.61,4529.6
+2025-01-08,Glovo,Food Delivery,-22.43,4507.17
+2025-01-10,Mercadona,Groceries,-79.46,4427.71
+2025-01-11,Mercadona,Groceries,-36.73,4390.98
+2025-01-11,Sushi Bar,Restaurants,-40.82,4350.16
+2025-01-11,Amazon,Shopping,-67.38,4282.78
+2025-01-15,Mercadona,Groceries,-90.96,4191.82
+2025-01-15,Glovo,Food Delivery,-35.01,4156.81
+2025-01-15,Zara,Shopping,-62.03,4094.78
+2025-01-16,Mercadona,Groceries,-85.83,4008.95
+2025-01-16,Pharmacy,Health,-14.69,3994.26
+2025-01-17,Lidl,Groceries,-36.97,3957.29
+2025-01-17,Amazon,Shopping,-56.47,3900.82
+2025-01-18,Mercadona,Groceries,-43.15,3857.67
+2025-01-19,Booking.com,Travel,-295.14,3562.53
+2025-01-20,Mercadona,Groceries,-54.92,3507.61
+2025-01-20,Burger Place,Restaurants,-12.93,3494.68
+2025-01-21,Mercadona,Groceries,-25.06,3469.62
+2025-01-21,Lidl,Groceries,-18.29,3451.33
+2025-01-21,Repsol,Fuel,-49.49,3401.84
+2025-01-22,Uber,Transport,-19.57,3382.27
+2025-01-22,Repsol,Fuel,-43.82,3338.45
+2025-01-23,Mercadona,Groceries,-81.78,3256.67
+2025-01-23,Glovo,Food Delivery,-35.22,3221.45
+2025-01-23,Metro Card,Transport,-35.56,3185.89
+2025-01-24,Lidl,Groceries,-67.32,3118.57
+2025-01-25,Ryanair,Travel,-94.96,3023.61
+2025-01-26,Mercadona,Groceries,-91.85,2931.76
+2025-01-26,Lidl,Groceries,-22.28,2909.48
+2025-01-27,Burger Place,Restaurants,-20.23,2889.25
+2025-01-27,Glovo,Food Delivery,-20.24,2869.01
+2025-01-28,Mercadona,Groceries,-48.35,2820.66
+2025-01-29,Mercadona,Groceries,-90.49,2730.17
+2025-01-31,Lidl,Groceries,-22.64,2707.53
+2025-01-31,Burger Place,Restaurants,-12.58,2694.95
+2025-01-31,Zara,Shopping,-49.34,2645.61
+2025-02-01,Monthly salary,Salary,2950,5595.61
+2025-02-01,Apartment rent,Rent,-850,4745.61
+2025-02-01,Electricity,Utilities,-61.78,4683.83
+2025-02-01,Internet & Mobile,Utilities,-45,4638.83
+2025-02-01,Netflix,Subscriptions,-12.99,4625.84
+2025-02-01,Spotify,Subscriptions,-10.99,4614.85
+2025-02-01,Gym,Subscriptions,-35,4579.85
+2025-02-01,Mercadona,Groceries,-55.39,4524.46
+2025-02-01,Sushi Bar,Restaurants,-37.47,4486.99
+2025-02-01,Pharmacy,Health,-13.47,4473.52
+2025-02-04,Mercadona,Groceries,-47.85,4425.67
+2025-02-04,Lidl,Groceries,-18.55,4407.12
+2025-02-04,Sushi Bar,Restaurants,-35.34,4371.78
+2025-02-05,Uber,Transport,-12.17,4359.61
+2025-02-07,Lidl,Groceries,-48.25,4311.36
+2025-02-07,Burger Place,Restaurants,-26.66,4284.7
+2025-02-08,Mercadona,Groceries,-99.29,4185.41
+2025-02-09,Mercadona,Groceries,-30.7,4154.71
+2025-02-09,Glovo,Food Delivery,-24.42,4130.29
+2025-02-09,Amazon,Shopping,-22.37,4107.92
+2025-02-10,Amazon,Shopping,-61.36,4046.56
+2025-02-11,Mercadona,Groceries,-77.67,3968.89
+2025-02-11,Glovo,Food Delivery,-19.98,3948.91
+2025-02-11,Amazon,Shopping,-15.8,3933.11
+2025-02-12,Glovo,Food Delivery,-26.44,3906.67
+2025-02-12,Uber,Transport,-13.69,3892.98
+2025-02-12,Booking.com,Travel,-198.15,3694.83
+2025-02-13,Sushi Bar,Restaurants,-36.18,3658.65
+2025-02-13,Glovo,Food Delivery,-29.12,3629.53
+2025-02-13,Freelance project,Extra income,135.03,3764.56
+2025-02-14,Lidl,Groceries,-25.63,3738.93
+2025-02-15,Glovo,Food Delivery,-25.65,3713.28
+2025-02-15,Metro Card,Transport,-31.02,3682.26
+2025-02-15,Uber,Transport,-16.41,3665.85
+2025-02-18,Glovo,Food Delivery,-25.4,3640.45
+2025-02-20,Zara,Shopping,-84.92,3555.53
+2025-02-21,Lidl,Groceries,-27.04,3528.49
+2025-02-22,Booking.com,Travel,-244.76,3283.73
+2025-02-23,Metro Card,Transport,-36.49,3247.24
+2025-02-24,Lidl,Groceries,-23.41,3223.83
+2025-02-24,Glovo,Food Delivery,-21.48,3202.35
+2025-02-25,Sushi Bar,Restaurants,-45.39,3156.96
+2025-02-27,Mercadona,Groceries,-38.88,3118.08
+2025-02-27,Glovo,Food Delivery,-17.37,3100.71
+2025-03-01,Monthly salary,Salary,2950,6050.71
+2025-03-01,Apartment rent,Rent,-850,5200.71
+2025-03-01,Electricity,Utilities,-86.39,5114.32
+2025-03-01,Internet & Mobile,Utilities,-45,5069.32
+2025-03-01,Netflix,Subscriptions,-12.99,5056.33
+2025-03-01,Spotify,Subscriptions,-10.99,5045.34
+2025-03-01,Gym,Subscriptions,-35,5010.34
+2025-03-01,Metro Card,Transport,-37.61,4972.73
+2025-03-02,Mercadona,Groceries,-100.1,4872.63
+2025-03-02,Amazon,Shopping,-109.84,4762.79
+2025-03-03,Burger Place,Restaurants,-29.67,4733.12
+2025-03-03,Glovo,Food Delivery,-33.37,4699.75
+2025-03-04,Glovo,Food Delivery,-16.38,4683.37
+2025-03-05,Burger Place,Restaurants,-17.18,4666.19
+2025-03-06,Lidl,Groceries,-43.55,4622.64
+2025-03-06,Burger Place,Restaurants,-16.22,4606.42
+2025-03-07,Mercadona,Groceries,-100.41,4506.01
+2025-03-07,Glovo,Food Delivery,-20.09,4485.92
+2025-03-07,Uber,Transport,-24.95,4460.97
+2025-03-08,Repsol,Fuel,-44.35,4416.62
+2025-03-08,Zara,Shopping,-82.45,4334.17
+2025-03-09,Mercadona,Groceries,-74.63,4259.54
+2025-03-09,Burger Place,Restaurants,-34.95,4224.59
+2025-03-09,Sushi Bar,Restaurants,-55.51,4169.08
+2025-03-09,Metro Card,Transport,-15.84,4153.24
+2025-03-11,Uber,Transport,-15.42,4137.82
+2025-03-12,Burger Place,Restaurants,-34.08,4103.74
+2025-03-12,Metro Card,Transport,-38.37,4065.37
+2025-03-13,Mercadona,Groceries,-28.49,4036.88
+2025-03-13,Amazon,Shopping,-10.83,4026.05
+2025-03-13,Pharmacy,Health,-25.21,4000.84
+2025-03-14,Pharmacy,Health,-9.04,3991.8
+2025-03-15,Mercadona,Groceries,-78.39,3913.41
+2025-03-15,Amazon,Shopping,-68.63,3844.78
+2025-03-16,Sushi Bar,Restaurants,-35.27,3809.51
+2025-03-16,Amazon,Shopping,-25.64,3783.87
+2025-03-16,Cinema,Entertainment,-17.49,3766.38
+2025-03-18,Mercadona,Groceries,-77.87,3688.51
+2025-03-18,Lidl,Groceries,-56.41,3632.1
+2025-03-19,Mercadona,Groceries,-55.91,3576.19
+2025-03-19,Lidl,Groceries,-20.16,3556.03
+2025-03-19,Burger Place,Restaurants,-29.58,3526.45
+2025-03-20,Mercadona,Groceries,-97.98,3428.47
+2025-03-20,Burger Place,Restaurants,-27.78,3400.69
+2025-03-20,Metro Card,Transport,-10.16,3390.53
+2025-03-20,Pharmacy,Health,-17.01,3373.52
+2025-03-21,Zara,Shopping,-77.57,3295.95
+2025-03-22,Mercadona,Groceries,-67.29,3228.66
+2025-03-22,Zara,Shopping,-30.93,3197.73
+2025-03-23,Metro Card,Transport,-16.47,3181.26
+2025-03-23,Amazon,Shopping,-25.47,3155.79
+2025-03-24,Mercadona,Groceries,-49.01,3106.78
+2025-03-24,Lidl,Groceries,-67.42,3039.36
+2025-03-25,Mercadona,Groceries,-37.15,3002.21
+2025-03-25,Glovo,Food Delivery,-35.39,2966.82
+2025-03-26,Glovo,Food Delivery,-18.08,2948.74
+2025-03-26,Uber,Transport,-8.22,2940.52
+2025-03-26,Amazon,Shopping,-112.62,2827.9
+2025-03-27,Mercadona,Groceries,-52.06,2775.84
+2025-03-28,Mercadona,Groceries,-64.64,2711.2
+2025-03-29,Lidl,Groceries,-62.19,2649.01
+2025-03-30,Uber,Transport,-18.97,2630.04
+2025-04-01,Monthly salary,Salary,2950,5580.04
+2025-04-01,Apartment rent,Rent,-850,4730.04
+2025-04-01,Electricity,Utilities,-86.76,4643.28
+2025-04-01,Internet & Mobile,Utilities,-45,4598.28
+2025-04-01,Netflix,Subscriptions,-12.99,4585.29
+2025-04-01,Spotify,Subscriptions,-10.99,4574.3
+2025-04-01,Gym,Subscriptions,-35,4539.3
+2025-04-01,Zara,Shopping,-78.98,4460.32
+2025-04-01,Pharmacy,Health,-19.63,4440.69
+2025-04-03,Mercadona,Groceries,-103.61,4337.08
+2025-04-03,Freelance project,Extra income,221.26,4558.34
+2025-04-04,Mercadona,Groceries,-78.69,4479.65
+2025-04-04,Metro Card,Transport,-20.52,4459.13
+2025-04-05,Glovo,Food Delivery,-37.53,4421.6
+2025-04-06,Mercadona,Groceries,-108.01,4313.59
+2025-04-06,Glovo,Food Delivery,-18.23,4295.36
+2025-04-06,Zara,Shopping,-63.56,4231.8
+2025-04-07,Glovo,Food Delivery,-25.53,4206.27
+2025-04-07,Repsol,Fuel,-64.47,4141.8
+2025-04-08,Mercadona,Groceries,-92.76,4049.04
+2025-04-09,Mercadona,Groceries,-38.03,4011.01
+2025-04-09,Lidl,Groceries,-40.51,3970.5
+2025-04-09,Glovo,Food Delivery,-14.68,3955.82
+2025-04-09,Metro Card,Transport,-13.77,3942.05
+2025-04-10,Amazon,Shopping,-110.0,3832.05
+2025-04-10,Freelance project,Extra income,202.87,4034.92
+2025-04-12,Mercadona,Groceries,-102.38,3932.54
+2025-04-13,Repsol,Fuel,-56.5,3876.04
+2025-04-14,Sushi Bar,Restaurants,-51.14,3824.9
+2025-04-16,Mercadona,Groceries,-78.49,3746.41
+2025-04-16,Zara,Shopping,-22.97,3723.44
+2025-04-17,Mercadona,Groceries,-25.93,3697.51
+2025-04-18,Mercadona,Groceries,-36.08,3661.43
+2025-04-18,Uber,Transport,-18.49,3642.94
+2025-04-19,Mercadona,Groceries,-30.56,3612.38
+2025-04-19,Burger Place,Restaurants,-21.95,3590.43
+2025-04-19,Glovo,Food Delivery,-20.88,3569.55
+2025-04-20,Mercadona,Groceries,-42.97,3526.58
+2025-04-20,Amazon,Shopping,-91.05,3435.53
+2025-04-20,Booking.com,Travel,-226.1,3209.43
+2025-04-21,Lidl,Groceries,-16.83,3192.6
+2025-04-21,Sushi Bar,Restaurants,-40.48,3152.12
+2025-04-21,Metro Card,Transport,-36.31,3115.81
+2025-04-21,Amazon,Shopping,-23.95,3091.86
+2025-04-23,Mercadona,Groceries,-41.88,3049.98
+2025-04-24,Glovo,Food Delivery,-31.37,3018.61
+2025-04-24,Zara,Shopping,-56.08,2962.53
+2025-04-25,Glovo,Food Delivery,-37.2,2925.33
+2025-04-29,Sushi Bar,Restaurants,-54.57,2870.76
+2025-04-30,Zara,Shopping,-58.15,2812.61
+2025-05-01,Monthly salary,Salary,2950,5762.61
+2025-05-01,Apartment rent,Rent,-850,4912.61
+2025-05-01,Electricity,Utilities,-59.25,4853.36
+2025-05-01,Internet & Mobile,Utilities,-45,4808.36
+2025-05-01,Netflix,Subscriptions,-12.99,4795.37
+2025-05-01,Spotify,Subscriptions,-10.99,4784.38
+2025-05-01,Gym,Subscriptions,-35,4749.38
+2025-05-01,Metro Card,Transport,-17.63,4731.75
+2025-05-02,Uber,Transport,-8.64,4723.11
+2025-05-03,Uber,Transport,-7.89,4715.22
+2025-05-04,Glovo,Food Delivery,-31.41,4683.81
+2025-05-04,Ryanair,Travel,-95.9,4587.91
+2025-05-05,Lidl,Groceries,-46.87,4541.04
+2025-05-05,Burger Place,Restaurants,-18.52,4522.52
+2025-05-06,Burger Place,Restaurants,-34.71,4487.81
+2025-05-06,Pharmacy,Health,-10.39,4477.42
+2025-05-07,Burger Place,Restaurants,-24.96,4452.46
+2025-05-08,Mercadona,Groceries,-109.26,4343.2
+2025-05-08,Glovo,Food Delivery,-31.57,4311.63
+2025-05-08,Pharmacy,Health,-32.06,4279.57
+2025-05-09,Mercadona,Groceries,-90.71,4188.86
+2025-05-09,Lidl,Groceries,-59.99,4128.87
+2025-05-09,Burger Place,Restaurants,-18.09,4110.78
+2025-05-10,Mercadona,Groceries,-101.66,4009.12
+2025-05-11,Sushi Bar,Restaurants,-44.09,3965.03
+2025-05-12,Mercadona,Groceries,-102.75,3862.28
+2025-05-13,Lidl,Groceries,-65.92,3796.36
+2025-05-13,Glovo,Food Delivery,-14.15,3782.21
+2025-05-13,Amazon,Shopping,-30.11,3752.1
+2025-05-14,Uber,Transport,-19.18,3732.92
+2025-05-16,Glovo,Food Delivery,-22.61,3710.31
+2025-05-17,Mercadona,Groceries,-42.62,3667.69
+2025-05-17,Sushi Bar,Restaurants,-44.74,3622.95
+2025-05-17,Glovo,Food Delivery,-35.46,3587.49
+2025-05-17,Amazon,Shopping,-102.15,3485.34
+2025-05-17,Zara,Shopping,-37.64,3447.7
+2025-05-18,Lidl,Groceries,-42.97,3404.73
+2025-05-18,Uber,Transport,-15.43,3389.3
+2025-05-18,Amazon,Shopping,-39.35,3349.95
+2025-05-20,Mercadona,Groceries,-109.6,3240.35
+2025-05-21,Uber,Transport,-24.17,3216.18
+2025-05-22,Mercadona,Groceries,-59.24,3156.94
+2025-05-22,Lidl,Groceries,-49.81,3107.13
+2025-05-22,Burger Place,Restaurants,-13.44,3093.69
+2025-05-22,Pharmacy,Health,-28.17,3065.52
+2025-05-23,Amazon,Shopping,-68.82,2996.7
+2025-05-24,Amazon,Shopping,-103.92,2892.78
+2025-05-25,Mercadona,Groceries,-51.4,2841.38
+2025-05-25,Metro Card,Transport,-30.2,2811.18
+2025-05-26,Lidl,Groceries,-45.77,2765.41
+2025-05-26,Glovo,Food Delivery,-22.25,2743.16
+2025-05-27,Burger Place,Restaurants,-27.97,2715.19
+2025-05-27,Glovo,Food Delivery,-32.43,2682.76
+2025-05-28,Lidl,Groceries,-34.02,2648.74
+2025-05-29,Burger Place,Restaurants,-26.53,2622.21
+2025-05-29,Glovo,Food Delivery,-22.04,2600.17
+2025-05-29,Amazon,Shopping,-25.54,2574.63
+2025-05-29,Booking.com,Travel,-173.1,2401.53
+2025-05-30,Glovo,Food Delivery,-19.92,2381.61
+2025-05-30,Repsol,Fuel,-43.73,2337.88
+2025-05-30,Amazon,Shopping,-74.4,2263.48
+2025-05-30,Pharmacy,Health,-36.44,2227.04
+2025-05-31,Uber,Transport,-9.24,2217.8
+2025-06-01,Monthly salary,Salary,2950,5167.8
+2025-06-01,Apartment rent,Rent,-850,4317.8
+2025-06-01,Electricity,Utilities,-78.13,4239.67
+2025-06-01,Internet & Mobile,Utilities,-45,4194.67
+2025-06-01,Netflix,Subscriptions,-12.99,4181.68
+2025-06-01,Spotify,Subscriptions,-10.99,4170.69
+2025-06-01,Gym,Subscriptions,-35,4135.69
+2025-06-01,Repsol,Fuel,-66.62,4069.07
+2025-06-01,Pharmacy,Health,-24.07,4045.0
+2025-06-03,Amazon,Shopping,-37.17,4007.83
+2025-06-04,Burger Place,Restaurants,-30.41,3977.42
+2025-06-05,Glovo,Food Delivery,-37.43,3939.99
+2025-06-06,Uber,Transport,-14.75,3925.24
+2025-06-06,Zara,Shopping,-51.68,3873.56
+2025-06-08,Mercadona,Groceries,-60.08,3813.48
+2025-06-08,Pharmacy,Health,-32.06,3781.42
+2025-06-09,Lidl,Groceries,-30.65,3750.77
+2025-06-09,Amazon,Shopping,-23.72,3727.05
+2025-06-10,Mercadona,Groceries,-70.34,3656.71
+2025-06-10,Zara,Shopping,-51.93,3604.78
+2025-06-11,Freelance project,Extra income,105.14,3709.92
+2025-06-12,Zara,Shopping,-49.19,3660.73
+2025-06-13,Mercadona,Groceries,-69.13,3591.6
+2025-06-13,Burger Place,Restaurants,-16.33,3575.27
+2025-06-15,Metro Card,Transport,-33.7,3541.57
+2025-06-16,Mercadona,Groceries,-49.0,3492.57
+2025-06-16,Burger Place,Restaurants,-33.63,3458.94
+2025-06-16,Glovo,Food Delivery,-22.48,3436.46
+2025-06-17,Mercadona,Groceries,-52.73,3383.73
+2025-06-17,Repsol,Fuel,-45.61,3338.12
+2025-06-17,Amazon,Shopping,-103.44,3234.68
+2025-06-18,Mercadona,Groceries,-63.53,3171.15
+2025-06-18,Burger Place,Restaurants,-33.65,3137.5
+2025-06-19,Mercadona,Groceries,-33.46,3104.04
+2025-06-20,Uber,Transport,-16.52,3087.52
+2025-06-20,Amazon,Shopping,-93.5,2994.02
+2025-06-21,Lidl,Groceries,-54.67,2939.35
+2025-06-21,Amazon,Shopping,-87.17,2852.18
+2025-06-22,Glovo,Food Delivery,-19.23,2832.95
+2025-06-22,Pharmacy,Health,-29.93,2803.02
+2025-06-23,Amazon,Shopping,-35.84,2767.18
+2025-06-24,Sushi Bar,Restaurants,-44.93,2722.25
+2025-06-25,Mercadona,Groceries,-79.76,2642.49
+2025-06-25,Glovo,Food Delivery,-35.51,2606.98
+2025-06-26,Mercadona,Groceries,-104.26,2502.72
+2025-06-26,Glovo,Food Delivery,-31.6,2471.12
+2025-06-26,Amazon,Shopping,-10.54,2460.58
+2025-06-27,Cinema,Entertainment,-21.51,2439.07
+2025-06-28,Repsol,Fuel,-52.44,2386.63
+2025-06-28,Amazon,Shopping,-25.61,2361.02
+2025-06-29,Mercadona,Groceries,-51.89,2309.13
+2025-06-29,Metro Card,Transport,-30.76,2278.37
+2025-06-30,Uber,Transport,-15.71,2262.66
+2025-06-30,Zara,Shopping,-30.18,2232.48
+2025-07-01,Monthly salary,Salary,2950,5182.48
+2025-07-01,Apartment rent,Rent,-850,4332.48
+2025-07-01,Electricity,Utilities,-87.0,4245.48
+2025-07-01,Internet & Mobile,Utilities,-45,4200.48
+2025-07-01,Netflix,Subscriptions,-12.99,4187.49
+2025-07-01,Spotify,Subscriptions,-10.99,4176.5
+2025-07-01,Gym,Subscriptions,-35,4141.5
+2025-07-01,Mercadona,Groceries,-45.0,4096.5
+2025-07-01,Metro Card,Transport,-26.56,4069.94
+2025-07-01,Booking.com,Travel,-162.36,3907.58
+2025-07-02,Lidl,Groceries,-39.12,3868.46
+2025-07-02,Burger Place,Restaurants,-19.47,3848.99
+2025-07-02,Metro Card,Transport,-37.03,3811.96
+2025-07-02,Zara,Shopping,-59.9,3752.06
+2025-07-02,Ryanair,Travel,-142.93,3609.13
+2025-07-03,Metro Card,Transport,-15.84,3593.29
+2025-07-03,Uber,Transport,-14.05,3579.24
+2025-07-03,Amazon,Shopping,-59.22,3520.02
+2025-07-04,Amazon,Shopping,-101.93,3418.09
+2025-07-06,Amazon,Shopping,-36.92,3381.17
+2025-07-07,Glovo,Food Delivery,-16.38,3364.79
+2025-07-07,Metro Card,Transport,-26.56,3338.23
+2025-07-08,Mercadona,Groceries,-50.13,3288.1
+2025-07-10,Mercadona,Groceries,-60.88,3227.22
+2025-07-10,Lidl,Groceries,-62.45,3164.77
+2025-07-10,Amazon,Shopping,-81.34,3083.43
+2025-07-12,Mercadona,Groceries,-104.24,2979.19
+2025-07-12,Pharmacy,Health,-20.6,2958.59
+2025-07-13,Sushi Bar,Restaurants,-41.5,2917.09
+2025-07-14,Mercadona,Groceries,-63.18,2853.91
+2025-07-14,Pharmacy,Health,-29.97,2823.94
+2025-07-15,Burger Place,Restaurants,-21.44,2802.5
+2025-07-16,Glovo,Food Delivery,-30.2,2772.3
+2025-07-16,Amazon,Shopping,-99.62,2672.68
+2025-07-16,Pharmacy,Health,-33.31,2639.37
+2025-07-16,Ryanair,Travel,-174.5,2464.87
+2025-07-17,Mercadona,Groceries,-48.54,2416.33
+2025-07-17,Sushi Bar,Restaurants,-46.7,2369.63
+2025-07-18,Mercadona,Groceries,-84.49,2285.14
+2025-07-18,Zara,Shopping,-41.21,2243.93
+2025-07-19,Mercadona,Groceries,-27.78,2216.15
+2025-07-19,Glovo,Food Delivery,-34.95,2181.2
+2025-07-22,Uber,Transport,-24.81,2156.39
+2025-07-22,Pharmacy,Health,-40.0,2116.39
+2025-07-23,Mercadona,Groceries,-25.24,2091.15
+2025-07-23,Sushi Bar,Restaurants,-25.32,2065.83
+2025-07-23,Glovo,Food Delivery,-17.89,2047.94
+2025-07-24,Mercadona,Groceries,-51.49,1996.45
+2025-07-24,Pharmacy,Health,-30.05,1966.4
+2025-07-25,Metro Card,Transport,-29.56,1936.84
+2025-07-27,Repsol,Fuel,-58.38,1878.46
+2025-07-28,Mercadona,Groceries,-101.41,1777.05
+2025-07-29,Mercadona,Groceries,-102.17,1674.88
+2025-07-29,Glovo,Food Delivery,-34.85,1640.03
+2025-07-29,Uber,Transport,-17.4,1622.63
+2025-07-29,Amazon,Shopping,-86.75,1535.88
+2025-07-30,Mercadona,Groceries,-31.88,1504.0
+2025-07-30,Lidl,Groceries,-41.03,1462.97
+2025-07-31,Mercadona,Groceries,-33.63,1429.34
+2025-07-31,Lidl,Groceries,-51.68,1377.66
+2025-07-31,Amazon,Shopping,-72.14,1305.52
+2025-08-01,Monthly salary,Salary,2950,4255.52
+2025-08-01,Apartment rent,Rent,-850,3405.52
+2025-08-01,Electricity,Utilities,-55.16,3350.36
+2025-08-01,Internet & Mobile,Utilities,-45,3305.36
+2025-08-01,Netflix,Subscriptions,-12.99,3292.37
+2025-08-01,Spotify,Subscriptions,-10.99,3281.38
+2025-08-01,Gym,Subscriptions,-35,3246.38
+2025-08-01,Uber,Transport,-7.76,3238.62
+2025-08-04,Lidl,Groceries,-42.2,3196.42
+2025-08-04,Amazon,Shopping,-37.3,3159.12
+2025-08-07,Mercadona,Groceries,-68.09,3091.03
+2025-08-08,Lidl,Groceries,-63.64,3027.39
+2025-08-09,Burger Place,Restaurants,-24.58,3002.81
+2025-08-09,Uber,Transport,-21.94,2980.87
+2025-08-09,Amazon,Shopping,-29.39,2951.48
+2025-08-10,Lidl,Groceries,-57.95,2893.53
+2025-08-10,Amazon,Shopping,-51.43,2842.1
+2025-08-11,Mercadona,Groceries,-81.23,2760.87
+2025-08-11,Burger Place,Restaurants,-30.72,2730.15
+2025-08-13,Mercadona,Groceries,-72.96,2657.19
+2025-08-13,Amazon,Shopping,-46.51,2610.68
+2025-08-14,Mercadona,Groceries,-104.4,2506.28
+2025-08-14,Uber,Transport,-20.11,2486.17
+2025-08-15,Sushi Bar,Restaurants,-35.38,2450.79
+2025-08-15,Metro Card,Transport,-25.75,2425.04
+2025-08-16,Metro Card,Transport,-23.66,2401.38
+2025-08-16,Zara,Shopping,-68.85,2332.53
+2025-08-19,Metro Card,Transport,-11.41,2321.12
+2025-08-21,Uber,Transport,-18.19,2302.93
+2025-08-22,Amazon,Shopping,-26.77,2276.16
+2025-08-23,Mercadona,Groceries,-63.35,2212.81
+2025-08-24,Mercadona,Groceries,-98.9,2113.91
+2025-08-24,Glovo,Food Delivery,-21.12,2092.79
+2025-08-25,Glovo,Food Delivery,-20.77,2072.02
+2025-08-25,Uber,Transport,-17.12,2054.9
+2025-08-25,Zara,Shopping,-85.77,1969.13
+2025-08-26,Glovo,Food Delivery,-16.0,1953.13
+2025-08-26,Zara,Shopping,-73.92,1879.21
+2025-08-27,Cinema,Entertainment,-15.12,1864.09
+2025-08-28,Zara,Shopping,-30.28,1833.81
+2025-08-29,Amazon,Shopping,-23.56,1810.25
+2025-08-30,Uber,Transport,-8.01,1802.24
+2025-08-30,Zara,Shopping,-52.13,1750.11
+2025-08-31,Burger Place,Restaurants,-23.29,1726.82
+2025-08-31,Amazon,Shopping,-93.15,1633.67
+2025-09-01,Monthly salary,Salary,2950,4583.67
+2025-09-01,Apartment rent,Rent,-850,3733.67
+2025-09-01,Electricity,Utilities,-69.44,3664.23
+2025-09-01,Internet & Mobile,Utilities,-45,3619.23
+2025-09-01,Netflix,Subscriptions,-12.99,3606.24
+2025-09-01,Spotify,Subscriptions,-10.99,3595.25
+2025-09-01,Gym,Subscriptions,-35,3560.25
+2025-09-02,Mercadona,Groceries,-54.04,3506.21
+2025-09-02,Pharmacy,Health,-29.64,3476.57
+2025-09-03,Metro Card,Transport,-19.22,3457.35
+2025-09-03,Amazon,Shopping,-51.92,3405.43
+2025-09-04,Mercadona,Groceries,-28.85,3376.58
+2025-09-04,Zara,Shopping,-69.39,3307.19
+2025-09-05,Mercadona,Groceries,-92.89,3214.3
+2025-09-07,Zara,Shopping,-58.53,3155.77
+2025-09-09,Mercadona,Groceries,-61.84,3093.93
+2025-09-09,Burger Place,Restaurants,-19.16,3074.77
+2025-09-10,Mercadona,Groceries,-107.17,2967.6
+2025-09-10,Glovo,Food Delivery,-28.49,2939.11
+2025-09-10,Uber,Transport,-10.48,2928.63
+2025-09-11,Mercadona,Groceries,-78.45,2850.18
+2025-09-12,Lidl,Groceries,-20.2,2829.98
+2025-09-13,Lidl,Groceries,-18.27,2811.71
+2025-09-14,Sushi Bar,Restaurants,-26.96,2784.75
+2025-09-14,Amazon,Shopping,-52.59,2732.16
+2025-09-15,Lidl,Groceries,-59.13,2673.03
+2025-09-15,Metro Card,Transport,-14.72,2658.31
+2025-09-16,Amazon,Shopping,-29.96,2628.35
+2025-09-18,Glovo,Food Delivery,-29.34,2599.01
+2025-09-20,Burger Place,Restaurants,-21.79,2577.22
+2025-09-21,Glovo,Food Delivery,-24.19,2553.03
+2025-09-22,Uber,Transport,-21.48,2531.55
+2025-09-23,Burger Place,Restaurants,-12.3,2519.25
+2025-09-23,Pharmacy,Health,-21.64,2497.61
+2025-09-24,Sushi Bar,Restaurants,-36.2,2461.41
+2025-09-24,Amazon,Shopping,-91.8,2369.61
+2025-09-25,Lidl,Groceries,-67.31,2302.3
+2025-09-25,Glovo,Food Delivery,-19.78,2282.52
+2025-09-25,Metro Card,Transport,-23.86,2258.66
+2025-09-25,Repsol,Fuel,-66.87,2191.79
+2025-09-27,Uber,Transport,-17.95,2173.84
+2025-09-27,Zara,Shopping,-89.1,2084.74
+2025-09-28,Metro Card,Transport,-37.85,2046.89
+2025-09-29,Lidl,Groceries,-66.99,1979.9
+2025-09-29,Repsol,Fuel,-49.99,1929.91
+2025-09-30,Lidl,Groceries,-21.65,1908.26
+2025-10-01,Monthly salary,Salary,2950,4858.26
+2025-10-01,Apartment rent,Rent,-850,4008.26
+2025-10-01,Electricity,Utilities,-45.54,3962.72
+2025-10-01,Internet & Mobile,Utilities,-45,3917.72
+2025-10-01,Netflix,Subscriptions,-12.99,3904.73
+2025-10-01,Spotify,Subscriptions,-10.99,3893.74
+2025-10-01,Gym,Subscriptions,-35,3858.74
+2025-10-02,Mercadona,Groceries,-49.28,3809.46
+2025-10-02,Burger Place,Restaurants,-32.06,3777.4
+2025-10-03,Glovo,Food Delivery,-29.85,3747.55
+2025-10-03,Zara,Shopping,-52.23,3695.32
+2025-10-04,Lidl,Groceries,-65.82,3629.5
+2025-10-04,Burger Place,Restaurants,-33.99,3595.51
+2025-10-04,Uber,Transport,-13.27,3582.24
+2025-10-04,Amazon,Shopping,-73.18,3509.06
+2025-10-05,Burger Place,Restaurants,-30.81,3478.25
+2025-10-05,Glovo,Food Delivery,-36.39,3441.86
+2025-10-06,Booking.com,Travel,-103.23,3338.63
+2025-10-08,Mercadona,Groceries,-62.01,3276.62
+2025-10-08,Sushi Bar,Restaurants,-38.24,3238.38
+2025-10-08,Metro Card,Transport,-10.24,3228.14
+2025-10-09,Metro Card,Transport,-18.73,3209.41
+2025-10-10,Metro Card,Transport,-34.71,3174.7
+2025-10-10,Amazon,Shopping,-17.4,3157.3
+2025-10-14,Glovo,Food Delivery,-17.31,3139.99
+2025-10-14,Repsol,Fuel,-66.66,3073.33
+2025-10-16,Repsol,Fuel,-49.05,3024.28
+2025-10-18,Glovo,Food Delivery,-25.83,2998.45
+2025-10-18,Uber,Transport,-24.04,2974.41
+2025-10-18,Zara,Shopping,-63.21,2911.2
+2025-10-19,Mercadona,Groceries,-68.16,2843.04
+2025-10-19,Metro Card,Transport,-37.51,2805.53
+2025-10-20,Glovo,Food Delivery,-35.81,2769.72
+2025-10-21,Cinema,Entertainment,-11.45,2758.27
+2025-10-22,Mercadona,Groceries,-56.39,2701.88
+2025-10-23,Amazon,Shopping,-14.91,2686.97
+2025-10-24,Burger Place,Restaurants,-21.17,2665.8
+2025-10-24,Glovo,Food Delivery,-15.63,2650.17
+2025-10-24,Amazon,Shopping,-17.73,2632.44
+2025-10-25,Burger Place,Restaurants,-33.4,2599.04
+2025-10-25,Glovo,Food Delivery,-33.08,2565.96
+2025-10-26,Mercadona,Groceries,-109.07,2456.89
+2025-10-26,Lidl,Groceries,-18.75,2438.14
+2025-10-26,Amazon,Shopping,-90.96,2347.18
+2025-10-27,Mercadona,Groceries,-58.82,2288.36
+2025-10-27,Lidl,Groceries,-66.07,2222.29
+2025-10-28,Lidl,Groceries,-17.45,2204.84
+2025-10-28,Pharmacy,Health,-21.81,2183.03
+2025-10-29,Mercadona,Groceries,-38.07,2144.96
+2025-10-29,Metro Card,Transport,-29.54,2115.42
+2025-10-31,Mercadona,Groceries,-50.4,2065.02
+2025-10-31,Lidl,Groceries,-31.47,2033.55
+2025-10-31,Glovo,Food Delivery,-15.87,2017.68
+2025-11-01,Monthly salary,Salary,2950,4967.68
+2025-11-01,Apartment rent,Rent,-850,4117.68
+2025-11-01,Electricity,Utilities,-48.05,4069.63
+2025-11-01,Internet & Mobile,Utilities,-45,4024.63
+2025-11-01,Netflix,Subscriptions,-12.99,4011.64
+2025-11-01,Spotify,Subscriptions,-10.99,4000.65
+2025-11-01,Gym,Subscriptions,-35,3965.65
+2025-11-02,Glovo,Food Delivery,-21.81,3943.84
+2025-11-03,Lidl,Groceries,-32.33,3911.51
+2025-11-03,Freelance project,Extra income,329.26,4240.77
+2025-11-04,Burger Place,Restaurants,-15.49,4225.28
+2025-11-04,Zara,Shopping,-76.49,4148.79
+2025-11-05,Uber,Transport,-15.61,4133.18
+2025-11-06,Glovo,Food Delivery,-33.74,4099.44
+2025-11-07,Amazon,Shopping,-94.21,4005.23
+2025-11-07,Zara,Shopping,-49.82,3955.41
+2025-11-08,Mercadona,Groceries,-84.33,3871.08
+2025-11-08,Sushi Bar,Restaurants,-56.78,3814.3
+2025-11-08,Glovo,Food Delivery,-30.28,3784.02
+2025-11-09,Glovo,Food Delivery,-19.68,3764.34
+2025-11-10,Glovo,Food Delivery,-22.02,3742.32
+2025-11-11,Mercadona,Groceries,-43.35,3698.97
+2025-11-11,Lidl,Groceries,-61.77,3637.2
+2025-11-12,Glovo,Food Delivery,-24.54,3612.66
+2025-11-12,Booking.com,Travel,-206.56,3406.1
+2025-11-13,Mercadona,Groceries,-49.19,3356.91
+2025-11-13,Sushi Bar,Restaurants,-48.94,3307.97
+2025-11-14,Mercadona,Groceries,-77.69,3230.28
+2025-11-14,Uber,Transport,-15.38,3214.9
+2025-11-14,Amazon,Shopping,-67.48,3147.42
+2025-11-15,Uber,Transport,-15.34,3132.08
+2025-11-16,Mercadona,Groceries,-67.66,3064.42
+2025-11-16,Metro Card,Transport,-35.1,3029.32
+2025-11-16,Uber,Transport,-15.2,3014.12
+2025-11-17,Lidl,Groceries,-45.21,2968.91
+2025-11-18,Glovo,Food Delivery,-32.08,2936.83
+2025-11-18,Repsol,Fuel,-46.17,2890.66
+2025-11-20,Mercadona,Groceries,-36.55,2854.11
+2025-11-20,Glovo,Food Delivery,-29.57,2824.54
+2025-11-20,Uber,Transport,-23.68,2800.86
+2025-11-20,Pharmacy,Health,-23.23,2777.63
+2025-11-20,Ryanair,Travel,-136.53,2641.1
+2025-11-22,Mercadona,Groceries,-43.06,2598.04
+2025-11-23,Amazon,Shopping,-30.62,2567.42
+2025-11-23,Pharmacy,Health,-16.2,2551.22
+2025-11-24,Mercadona,Groceries,-105.12,2446.1
+2025-11-24,Lidl,Groceries,-42.19,2403.91
+2025-11-25,Burger Place,Restaurants,-25.78,2378.13
+2025-11-28,Glovo,Food Delivery,-31.79,2346.34
+2025-11-29,Mercadona,Groceries,-89.15,2257.19
+2025-11-29,Lidl,Groceries,-19.16,2238.03
+2025-11-29,Burger Place,Restaurants,-22.39,2215.64
+2025-11-30,Burger Place,Restaurants,-14.15,2201.49
+2025-11-30,Pharmacy,Health,-11.74,2189.75
+2025-12-01,Monthly salary,Salary,2950,5139.75
+2025-12-01,Apartment rent,Rent,-850,4289.75
+2025-12-01,Electricity,Utilities,-62.6,4227.15
+2025-12-01,Internet & Mobile,Utilities,-45,4182.15
+2025-12-01,Netflix,Subscriptions,-12.99,4169.16
+2025-12-01,Spotify,Subscriptions,-10.99,4158.17
+2025-12-01,Gym,Subscriptions,-35,4123.17
+2025-12-01,Mercadona,Groceries,-103.05,4020.12
+2025-12-01,Sushi Bar,Restaurants,-47.07,3973.05
+2025-12-01,Glovo,Food Delivery,-27.56,3945.49
+2025-12-01,Cinema,Entertainment,-16.59,3928.9
+2025-12-02,Sushi Bar,Restaurants,-41.85,3887.05
+2025-12-03,Burger Place,Restaurants,-30.18,3856.87
+2025-12-03,Glovo,Food Delivery,-17.0,3839.87
+2025-12-04,Glovo,Food Delivery,-25.47,3814.4
+2025-12-05,Mercadona,Groceries,-41.53,3772.87
+2025-12-05,Lidl,Groceries,-33.76,3739.11
+2025-12-06,Mercadona,Groceries,-30.31,3708.8
+2025-12-06,Uber,Transport,-8.53,3700.27
+2025-12-07,Mercadona,Groceries,-67.93,3632.34
+2025-12-08,Lidl,Groceries,-18.93,3613.41
+2025-12-08,Glovo,Food Delivery,-27.61,3585.8
+2025-12-09,Mercadona,Groceries,-81.81,3503.99
+2025-12-09,Booking.com,Travel,-126.54,3377.45
+2025-12-10,Mercadona,Groceries,-99.63,3277.82
+2025-12-10,Lidl,Groceries,-24.95,3252.87
+2025-12-10,Metro Card,Transport,-27.85,3225.02
+2025-12-10,Uber,Transport,-21.9,3203.12
+2025-12-10,Amazon,Shopping,-55.74,3147.38
+2025-12-13,Amazon,Shopping,-111.77,3035.61
+2025-12-14,Burger Place,Restaurants,-17.82,3017.79
+2025-12-14,Uber,Transport,-17.02,3000.77
+2025-12-15,Uber,Transport,-14.72,2986.05
+2025-12-15,Repsol,Fuel,-41.29,2944.76
+2025-12-17,Lidl,Groceries,-53.0,2891.76
+2025-12-17,Glovo,Food Delivery,-37.47,2854.29
+2025-12-17,Metro Card,Transport,-20.06,2834.23
+2025-12-18,Lidl,Groceries,-26.19,2808.04
+2025-12-19,Glovo,Food Delivery,-27.63,2780.41
+2025-12-20,Repsol,Fuel,-48.27,2732.14
+2025-12-21,Mercadona,Groceries,-98.78,2633.36
+2025-12-21,Lidl,Groceries,-30.24,2603.12
+2025-12-21,Glovo,Food Delivery,-34.67,2568.45
+2025-12-21,Amazon,Shopping,-95.47,2472.98
+2025-12-21,Cinema,Entertainment,-16.35,2456.63
+2025-12-22,Amazon,Shopping,-102.65,2353.98
+2025-12-23,Metro Card,Transport,-25.08,2328.9
+2025-12-23,Amazon,Shopping,-94.68,2234.22
+2025-12-24,Amazon,Shopping,-27.62,2206.6
+2025-12-24,Pharmacy,Health,-22.4,2184.2
+2025-12-25,Mercadona,Groceries,-49.21,2134.99
+2025-12-25,Burger Place,Restaurants,-21.91,2113.08
+2025-12-25,Glovo,Food Delivery,-22.39,2090.69
+2025-12-26,Mercadona,Groceries,-37.95,2052.74
+2025-12-26,Lidl,Groceries,-28.06,2024.68
+2025-12-27,Mercadona,Groceries,-36.5,1988.18
+2025-12-27,Lidl,Groceries,-57.8,1930.38
+2025-12-28,Mercadona,Groceries,-97.07,1833.31
+2025-12-28,Glovo,Food Delivery,-27.8,1805.51
+2025-12-29,Lidl,Groceries,-19.08,1786.43
+2025-12-29,Metro Card,Transport,-21.48,1764.95
+2025-12-29,Zara,Shopping,-31.33,1733.62
+2025-12-30,Amazon,Shopping,-40.8,1692.82
+2025-12-30,Zara,Shopping,-25.22,1667.6
+2025-12-30,Pharmacy,Health,-30.06,1637.54
+2025-12-31,Amazon,Shopping,-37.7,1599.84

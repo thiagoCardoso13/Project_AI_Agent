@@ -1,0 +1,59 @@
+product_id,product_name,category,price_eur,cost_eur,stock_units,supplier,launch_date
+1,Wireless Earbuds,Electronics,59,35.98,12,EuroGoods,2023-05-17
+2,Bluetooth Speaker,Electronics,79,39.96,377,Nordic Supply,2025-01-21
+3,Smartwatch,Electronics,199,93.88,216,Nordic Supply,2022-03-03
+4,Laptop Stand,Electronics,39,18.46,119,BlueWave Ltd,2025-05-17
+5,USB-C Hub,Electronics,45,20.55,101,BlueWave Ltd,2024-05-09
+6,Mechanical Keyboard,Electronics,119,60.11,301,EuroGoods,2022-01-14
+7,Gaming Mouse,Electronics,65,41.58,81,Atlas Import,2023-11-28
+8,4K Monitor,Electronics,349,181.29,110,EuroGoods,2022-07-29
+9,Webcam HD,Electronics,89,42.11,49,EuroGoods,2023-12-06
+10,Power Bank,Electronics,35,21.03,22,Atlas Import,2025-01-03
+11,Noise Cancelling Headphones,Electronics,249,119.82,193,Nordic Supply,2025-02-04
+12,"Tablet 10""",Electronics,299,156.47,321,BlueWave Ltd,2024-01-11
+13,Coffee Maker,Home & Kitchen,89,52.9,360,Nordic Supply,2022-04-04
+14,Air Fryer,Home & Kitchen,119,73.22,395,EuroGoods,2022-06-13
+15,Blender,Home & Kitchen,69,45.8,51,Atlas Import,2023-07-24
+16,Knife Set,Home & Kitchen,55,30.98,186,IberTrade,2024-01-29
+17,Non-stick Pan,Home & Kitchen,39,21.01,343,EuroGoods,2022-05-27
+18,Electric Kettle,Home & Kitchen,35,21.08,87,BlueWave Ltd,2023-05-17
+19,Vacuum Robot,Home & Kitchen,279,136.95,194,EuroGoods,2025-02-14
+20,Desk Lamp,Home & Kitchen,29,14.64,166,Nordic Supply,2023-04-15
+21,Bedsheet Set,Home & Kitchen,49,32.12,161,Atlas Import,2023-07-03
+22,Water Filter Jug,Home & Kitchen,25,11.66,290,EuroGoods,2023-03-12
+23,Running Shoes,Fashion,95,58.32,202,Atlas Import,2022-10-20
+24,Denim Jacket,Fashion,79,40.78,126,BlueWave Ltd,2025-01-08
+25,Wool Sweater,Fashion,65,33.52,299,Atlas Import,2025-04-10
+26,Leather Belt,Fashion,35,19.24,112,IberTrade,2024-11-09
+27,Sunglasses,Fashion,49,28.1,386,Nordic Supply,2022-08-13
+28,Backpack,Fashion,59,28.8,81,Atlas Import,2025-05-06
+29,Sneakers,Fashion,85,39.6,195,BlueWave Ltd,2024-08-16
+30,Rain Jacket,Fashion,99,57.65,283,Nordic Supply,2022-08-23
+31,Cotton T-shirt,Fashion,19,11.79,274,EuroGoods,2023-11-28
+32,Winter Coat,Fashion,159,75.98,222,IberTrade,2024-07-18
+33,Yoga Mat,Sports,29,13.07,369,EuroGoods,2024-10-22
+34,Dumbbell Set,Sports,89,57.0,259,Nordic Supply,2023-09-04
+35,Resistance Bands,Sports,19,12.55,259,BlueWave Ltd,2023-02-12
+36,Cycling Helmet,Sports,59,28.8,390,IberTrade,2025-01-09
+37,Tennis Racket,Sports,119,81.92,271,Nordic Supply,2025-05-11
+38,Football,Sports,25,13.28,9,Nordic Supply,2024-01-14
+39,Fitness Tracker,Sports,79,52.9,157,IberTrade,2022-04-29
+40,Water Bottle,Sports,15,7.65,290,Nordic Supply,2022-06-25
+41,Camping Tent,Sports,149,94.31,35,BlueWave Ltd,2022-09-15
+42,Hiking Backpack,Sports,99,47.73,243,BlueWave Ltd,2022-12-05
+43,Python for Data Analysis,Books,45,23.23,310,Atlas Import,2023-03-10
+44,Clean Code,Books,38,25.92,386,IberTrade,2023-10-01
+45,Atomic Habits,Books,18,9.9,343,EuroGoods,2024-06-16
+46,The Psychology of Money,Books,17,11.47,231,Nordic Supply,2023-05-23
+47,Designing Data-Intensive Applications,Books,49,24.8,173,Nordic Supply,2025-04-19
+48,Sapiens,Books,20,11.77,301,IberTrade,2022-01-15
+49,Deep Work,Books,16,7.48,323,Nordic Supply,2023-04-14
+50,Storytelling with Data,Books,35,16.34,16,EuroGoods,2022-05-26
+51,Face Serum,Beauty,29,16.78,142,Atlas Import,2023-03-15
+52,Sunscreen SPF50,Beauty,19,11.11,370,BlueWave Ltd,2025-03-26
+53,Hair Dryer,Beauty,59,33.52,242,Atlas Import,2023-01-25
+54,Perfume 100ml,Beauty,79,37.41,337,Atlas Import,2023-12-27
+55,Electric Toothbrush,Beauty,69,38.36,239,Nordic Supply,2022-07-21
+56,Moisturizer,Beauty,24,11.16,372,EuroGoods,2022-08-12
+57,Makeup Kit,Beauty,45,23.05,97,BlueWave Ltd,2024-07-07
+58,Beard Trimmer,Beauty,49,23.77,93,EuroGoods,2024-08-05
