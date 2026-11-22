@@ -1,113 +1,116 @@
-# 💬 Chat com seus dados (texto → SQL)
+# 💬 Chat With Your Data (text → SQL)
 
-Uma tela de chat com um **agente de IA** que já conhece os dados da pasta `demo_data/`.
-Você pergunta em linguagem normal ("qual categoria tem a maior margem?") e o agente **escolhe as tabelas, escreve o SQL, executa, mostra a tabela e o gráfico, e explica o resultado**.
+A chat interface with an **AI agent** that already knows the data in the `demo_data/` folder.
+Ask a question in plain language ("which category has the highest profit margin?") and the agent **picks the tables, writes the SQL, runs it, shows the table and a chart, and explains the result**.
 
-Feito com **Python · LangGraph · DuckDB · Streamlit · Plotly**. Funciona com qualquer modelo (Gemini, Groq, OpenRouter, Ollama).
+Built with **Python · LangGraph · DuckDB · Streamlit · Plotly**. Works with any LLM provider (Gemini, Groq, OpenRouter, Ollama).
 
-<!-- Troque pelo link da demo publicada e coloque aqui o GIF/prints -->
-> 🔗 **Demo:** _em breve_  ·  🎥 **Vídeo:** _em breve_
+<!-- Replace with the published demo link and add a GIF/screenshots here -->
+> 🔗 **Live demo:** _coming soon_  ·  🎥 **Video:** _coming soon_
 
-## Como funciona
+## How it works
 
-O agente é um **grafo próprio do LangGraph** (`StateGraph`), não um agente pronto. Cada pergunta passa por nós com responsabilidades separadas:
+The agent is a **custom LangGraph graph** (`StateGraph`), not an off-the-shelf agent. Every question flows through nodes with separate responsibilities:
 
 ```mermaid
 graph TD;
-    inicio([início]) --> entrada
+    start([start]) --> entrada
     entrada --> agente
-    agente -- "responde" --> fim([fim])
-    agente -- "chama ferramenta" --> validar
-    validar -- "SQL bloqueado" --> agente
+    agente -- "answers" --> done([end])
+    agente -- "calls a tool" --> validar
+    validar -- "SQL blocked" --> agente
     validar -- "ok" --> executar
-    executar -- "resultado ou erro" --> agente
-    executar -- "3 erros seguidos" --> desistir
-    desistir --> fim
+    executar -- "result or error" --> agente
+    executar -- "3 errors in a row" --> desistir
+    desistir --> done
 ```
 
-| Nó | O que faz |
+| Node | What it does |
 |---|---|
-| `entrada` | Começa um novo turno (zera o contador de erros; a memória da conversa continua) |
-| `agente` | O modelo decide qual ferramenta usar ou responde ao usuário |
-| `validar` | **Barra qualquer SQL que não seja `SELECT`** antes de tocar no banco |
-| `executar` | Roda as ferramentas; erros de SQL voltam pro modelo, que **se autocorrige** (até 2 retentativas) |
-| `desistir` | Responde com honestidade quando não chega a uma consulta válida |
+| `entrada` (entry) | Starts a new turn (resets the error counter; conversation memory is kept) |
+| `agente` (agent) | The model decides which tool to call, or answers the user |
+| `validar` (validate) | **Blocks any SQL that is not a `SELECT`** before it ever touches the database |
+| `executar` (execute) | Runs the tools; SQL errors go back to the model, which **self-corrects** (up to 2 retries) |
+| `desistir` (give up) | Answers honestly when it can't reach a valid query |
 
-**Ferramentas do agente:** `listar_tabelas`, `descrever_tabela`, `executar_sql`, `criar_grafico`.
+**Agent tools:** `listar_tabelas` (list tables), `descrever_tabela` (describe a table), `executar_sql` (run SQL), `criar_grafico` (create chart).
 
-### Destaques de engenharia
-- 🛡️ **Somente leitura:** validação por *allowlist* (só `SELECT`/`WITH`), uma instrução por vez, sem leitura de arquivos pelo SQL. Coberta por testes.
-- 🔁 **Autocorreção:** o erro do DuckDB volta pro modelo, que corrige o SQL.
-- 🧠 **Memória da conversa** (checkpointer do LangGraph): "e só em 2024?" funciona.
-- 👀 **Transparência:** o SQL gerado aparece em cada resposta e os passos do agente são mostrados em tempo real (*streaming*).
-- 📂 **Zero configuração de dados:** todo CSV na pasta `demo_data/` vira uma tabela automaticamente; o agente descobre sozinho como elas se ligam.
-- 🔌 **Independente de provedor:** troca de modelo por variável de ambiente.
-- 🧪 **Testes sem chave de API:** o grafo é testado com um modelo simulado.
+### Engineering highlights
+- 🛡️ **Read-only by design:** allowlist validation (only `SELECT`/`WITH`), one statement at a time, no file access through SQL. Covered by tests.
+- 🔁 **Self-correction:** the DuckDB error is fed back to the model, which fixes its own SQL.
+- 🧠 **Conversation memory** (LangGraph checkpointer): follow-ups like "and only 2024?" work.
+- 👀 **Transparency:** the generated SQL is shown with every answer, and the agent's steps stream live in the UI.
+- 📂 **Zero data setup:** every CSV in `demo_data/` becomes a table automatically; the agent figures out on its own how the tables relate.
+- 🔌 **Provider-agnostic:** switch models with an environment variable, with automatic fallback models when a free-tier quota runs out.
+- 🧪 **Tests without an API key:** the graph is tested with a simulated model.
 
-## Dados de demonstração
+## Demo data
 
-8 CSVs fictícios (mas com padrões reais: pico de Black Friday, crescimento ~15% a/a, devoluções…), em `demo_data/`:
-loja online (`store_customers`, `store_products`, `store_orders`, `store_order_items`), RH (`hr_employees`),
-marketing (`marketing_daily`), suporte (`support_tickets`) e finanças pessoais (`personal_finance_2025`).
+8 fictional CSVs (with realistic patterns: Black Friday spike, ~15% YoY growth, returns…) in `demo_data/`:
+online store (`store_customers`, `store_products`, `store_orders`, `store_order_items`), HR (`hr_employees`),
+marketing (`marketing_daily`), support (`support_tickets`) and personal finance (`personal_finance_2025`).
 
-## Perguntas para testar
+## Questions to try
 
-1. Quanto a loja faturou em 2025?
-2. Mostre o faturamento por mês em 2024 e 2025 _(gráfico com o pico da Black Friday)_
-3. Qual categoria tem a maior margem de lucro? _(junta 3 tabelas)_
-4. Qual a taxa de devolução por categoria?
-5. Qual departamento tem a maior rotatividade e qual o principal motivo de saída?
-6. Qual canal de anúncio tem o melhor retorno (receita ÷ gasto)?
-7. Quanto gastei com delivery em 2025?
+The agent answers in the language you ask in.
 
-## Rodando localmente
+1. How much revenue did the store make in 2025?
+2. Show monthly revenue for 2024 and 2025 _(the chart reveals the Black Friday spike)_
+3. Which category has the highest profit margin? _(joins 3 tables)_
+4. What is the return rate by category?
+5. Which department has the highest turnover, and what is the main reason people leave?
+6. Which ad channel has the best return (revenue ÷ spend)?
+7. How much did I spend on food delivery in 2025?
+
+## Running locally
 
 ```bash
-# Python 3.10+ (recomendado 3.12)
+# Python 3.10+ (3.12 recommended)
 python3.12 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env        # e preencha a chave (Gemini grátis: aistudio.google.com)
-export $(grep -v '^#' .env | sed 's/ *#.*//' | xargs)
+cp .env.example .env        # then add your key (free Gemini key: aistudio.google.com)
 streamlit run app.py
 ```
 
-Testes (não precisam de chave):
+The `.env` file is loaded automatically.
+
+Tests (no API key needed):
 
 ```bash
 pip install -r requirements-dev.txt && pytest
 ```
 
-### Escolhendo o modelo
+### Choosing the model
 
-| `LLM_PROVIDER` | Chave | Observação |
+| `LLM_PROVIDER` | Key | Notes |
 |---|---|---|
-| `gemini` (padrão) | `GOOGLE_API_KEY` | Plano gratuito do Google AI Studio |
-| `groq` | `GROQ_API_KEY` | Muito rápido |
-| `openrouter` | `OPENROUTER_API_KEY` | Modelos `:free` (requer `pip install langchain-openai`) |
-| `ollama` | — | Local (requer `pip install langchain-ollama`) |
+| `gemini` (default) | `GOOGLE_API_KEY` | Free tier from Google AI Studio |
+| `groq` | `GROQ_API_KEY` | Very fast |
+| `openrouter` | `OPENROUTER_API_KEY` | `:free` models (requires `pip install langchain-openai`) |
+| `ollama` | — | Local (requires `pip install langchain-ollama`) |
 
-`LLM_MODEL` troca o modelo do provedor. Limites do plano gratuito mudam: confira na página de cada provedor.
+`LLM_MODEL` overrides the provider's model. With Gemini, the agent automatically falls back to other models when one hits its quota (`LLM_FALLBACK_MODELS` to customize). Free-tier limits change often: check each provider's page.
 
-## Publicando (Streamlit Community Cloud)
-1. Suba o repositório no GitHub (a chave **nunca** vai no código: `.env` e `secrets.toml` estão no `.gitignore`).
-2. No Streamlit Community Cloud, crie o app apontando para `app.py`.
-3. Em **Settings → Secrets**, cole o conteúdo de `.streamlit/secrets.toml.example` com a sua chave.
-4. A demo limita **10 perguntas por sessão** (`MAX_QUESTIONS`) para não estourar a cota gratuita.
+## Deploying (Streamlit Community Cloud)
+1. Push the repo to GitHub (the key **never** goes in the code: `.env` and `secrets.toml` are in `.gitignore`).
+2. In Streamlit Community Cloud, create an app pointing to `app.py`.
+3. Under **Settings → Secrets**, paste the contents of `.streamlit/secrets.toml.example` with your key.
+4. The demo limits each session to **10 questions** (`MAX_QUESTIONS`) to protect the free quota.
 
-## Estrutura
+## Project structure
 
 ```
-app.py              # interface Streamlit
+app.py              # Streamlit UI
 agent/
   db.py             # CSVs → DuckDB
-  safety.py         # validação "só SELECT"
-  tools.py          # as 4 ferramentas + gráficos
-  llm.py            # fábrica de modelos
-  graph.py          # StateGraph do agente
-tests/              # pytest, sem chamar API
-demo_data/          # CSVs de demonstração
+  safety.py         # "SELECT only" validation
+  tools.py          # the 4 tools + charts
+  llm.py            # model factory
+  graph.py          # the agent's StateGraph
+tests/              # pytest, no API calls
+demo_data/          # demo CSVs
 ```
 
-## Próximos passos
-- Dashboard Power BI com os mesmos dados (modelo estrela + DAX), para comparar "abrir o dashboard" × "só perguntar".
-- Avaliação automática: conjunto de perguntas com respostas esperadas para medir a acurácia do SQL.
+## Next steps
+- A Power BI dashboard on the same data (star schema + DAX), to compare "open the dashboard" vs. "just ask".
+- Automated evaluation: a set of questions with expected answers to measure SQL accuracy.
