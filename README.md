@@ -39,7 +39,7 @@ graph TD;
 - 🛡️ **Read-only by design:** allowlist validation (only `SELECT`/`WITH`), one statement at a time, no file access through SQL. Covered by tests.
 - 🔁 **Self-correction:** the DuckDB error is fed back to the model, which fixes its own SQL.
 - 🧠 **Conversation memory** (LangGraph checkpointer): follow-ups like "and only 2024?" work.
-- 👀 **Transparency:** the generated SQL is shown with every answer, and the agent's steps stream live in the UI.
+- 👀 **Transparency:** every answer shows a tool timeline (what ran, how long, which errors were self-fixed) and the generated SQL, plus Chart / Table / SQL tabs and CSV download.
 - 📂 **Zero data setup:** every CSV in `demo_data/` becomes a table automatically; the agent figures out on its own how the tables relate.
 - 🔌 **Provider-agnostic:** switch models with an environment variable, with automatic fallback models when a free-tier quota runs out.
 - 🧪 **Tests without an API key:** the graph is tested with a simulated model.
@@ -100,7 +100,9 @@ pip install -r requirements-dev.txt && pytest
 ## Project structure
 
 ```
-app.py              # Streamlit UI
+app.py              # Streamlit UI (Intelligence layout)
+assets/style.css    # theme: sidebar, tool timeline, chart card, composer
+.streamlit/         # light theme config + secrets example
 agent/
   db.py             # CSVs → DuckDB
   safety.py         # "SELECT only" validation

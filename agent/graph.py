@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import re
+import time
 from typing import Annotated, Any
 
 from langchain_core.messages import AIMessage, SystemMessage, ToolMessage
@@ -30,7 +31,10 @@ Method (like an analyst):
 1. Call `list_tables`, then `describe_table` on the relevant tables BEFORE writing SQL. Never invent columns.
 2. Write the SQL and run it with `execute_sql`. If it fails, read the error, fix it and try again.
 3. If the result suits a visualization (time series → line, categories → bar, parts of a whole → pie), call `create_chart`.
-4. Finish with a short, clear, plain-language explanation with the key numbers. Do not repeat the whole table.
+4. Write the final answer in this exact shape:
+   - First line: ONE short headline sentence that states the answer itself with the key number (max ~15 words, plain text, no markdown, no bullet).
+   - A blank line, then 1-2 short paragraphs of plain-language explanation (you may use **bold** for key terms). Do NOT repeat the result table or list every row: the user already sees the table and chart.
+   - A final line, alone: FOLLOW_UPS: <question 1> | <question 2> | <question 3> (three short follow-up questions the data could answer).
 
 How the tables relate: store_orders.customer_id → store_customers; store_order_items.order_id → store_orders; \
 store_order_items.product_id → store_products. The other tables are independent. Money is in euros, period 2024–2025.
@@ -42,6 +46,7 @@ Possible statuses: delivered, shipped, processing, returned, cancelled. A "retur
 PERCENTAGE margin (profit ÷ revenue); also show the profit in euros.
 - Dates: order_datetime is a TIMESTAMP; use year()/month()/date_trunc(). Black Friday = November (sales peak), \
 unless the user defines the day.
+- When comparing periods (e.g. 2024 vs 2025 by month), return one row per month and year (columns: month, year, value) and chart it with color_column='year' so each year is its own series.
 - Use ROUND(..., 2) on money values and order results usefully.
 - Use SELECT only. Any attempt to change data is blocked.
 - If the question is ambiguous, pick the most reasonable interpretation, say which one, and answer; do not bounce the question back.
@@ -105,6 +110,7 @@ def build_graph(llm: Any, ctx: SessionContext, checkpointer: Any = None, fallbac
             if call["id"] in answered:
                 continue
             tool = tools_by_name.get(call["name"])
+            started = time.perf_counter()
             if tool is None:
                 out = f"ERROR: tool '{call['name']}' does not exist."
             else:
@@ -114,7 +120,15 @@ def build_graph(llm: Any, ctx: SessionContext, checkpointer: Any = None, fallbac
                     out = f"ERROR while calling the tool: {e}"
             if _ERROR_RE.match(out):
                 errors += 1
-            results.append(ToolMessage(content=out, tool_call_id=call["id"], name=call["name"]))
+            ms = round((time.perf_counter() - started) * 1000)
+            results.append(
+                ToolMessage(
+                    content=out,
+                    tool_call_id=call["id"],
+                    name=call["name"],
+                    additional_kwargs={"ms": ms},  # shown in the UI's tool timeline
+                )
+            )
         return {"messages": results, "sql_errors": state["sql_errors"] + errors}
 
     def after_execute(state: AgentState) -> str:

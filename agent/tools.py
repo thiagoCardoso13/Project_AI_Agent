@@ -111,14 +111,34 @@ def build_tools(ctx: SessionContext) -> list:
     return [list_tables, describe_table, execute_sql, create_chart]
 
 
+PALETTE = ["#e2643c", "#2c4a63", "#efa181", "#1f9d6b", "#b9a6ff", "#ddd8cf"]
+# With several series the older one is muted and the newest gets the accent color.
+SERIES_PALETTE = ["#ddd8cf", "#e2643c", "#efa181", "#2c4a63", "#1f9d6b", "#b9a6ff"]
+
+
 def build_figure(spec: ChartSpec, df: pd.DataFrame) -> Any:
     import plotly.express as px
 
     if spec.kind == "line":
-        fig = px.line(df, x=spec.x, y=spec.y, color=spec.color, markers=True, title=spec.title)
+        fig = px.line(df, x=spec.x, y=spec.y, color=spec.color, markers=True, color_discrete_sequence=SERIES_PALETTE if spec.color else PALETTE)
+        fig.update_traces(line_width=2.5)
     elif spec.kind == "pie":
-        fig = px.pie(df, names=spec.x, values=spec.y, title=spec.title)
+        fig = px.pie(df, names=spec.x, values=spec.y, color_discrete_sequence=PALETTE)
     else:
-        fig = px.bar(df, x=spec.x, y=spec.y, color=spec.color, title=spec.title, barmode="group")
-    fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
+        fig = px.bar(df, x=spec.x, y=spec.y, color=spec.color, barmode="group", color_discrete_sequence=SERIES_PALETTE if spec.color else PALETTE)
+        try:
+            fig.update_traces(marker_cornerradius=4)
+        except Exception:
+            pass
+    fig.update_layout(
+        title=None,
+        margin=dict(l=8, r=8, t=28, b=8),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="IBM Plex Sans, sans-serif", size=12, color="#57534c"),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, title_text=""),
+        height=330,
+    )
+    fig.update_xaxes(showgrid=False, linecolor="#e6e2da", title_text=None)
+    fig.update_yaxes(gridcolor="#efece6", zeroline=False, title_text=None)
     return fig
