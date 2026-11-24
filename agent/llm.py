@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()  # loads the project's .env file, if present
 
 DEFAULTS = {
-    "gemini": "gemini-3.5-flash",
+    "gemini": "gemini-3.5-flash-lite",
     "groq": "llama-3.3-70b-versatile",
     "openrouter": "meta-llama/llama-3.3-70b-instruct:free",
     "ollama": "qwen2.5:14b",
@@ -30,7 +30,7 @@ def get_setting(name: str, default: str | None = None) -> str | None:
 
 
 # Fallback models: each has its own free quota, so if one hits its limit the agent uses the next.
-GEMINI_FALLBACKS = ["gemini-3.6-flash", "gemini-3.1-flash-lite", "gemini-3.5-flash-lite"]
+GEMINI_FALLBACKS = ["gemini-3.1-flash-lite", "gemini-3.5-flash", "gemini-3.6-flash"]
 
 
 def get_fallback_llms() -> list:

@@ -5,8 +5,9 @@ Ask a question in plain language ("which category has the highest profit margin?
 
 Built with **Python · LangGraph · DuckDB · Streamlit · Plotly**. Works with any LLM provider (Gemini, Groq, OpenRouter, Ollama).
 
-<!-- Replace with the published demo link -->
-> 🔗 **Live demo:** _coming soon_  ·  🎥 **Video:** _coming soon_
+> 🔗 **Live demo:** [projectaiagent-pgybf64azfpyftzwls2l2t.streamlit.app](https://projectaiagent-pgybf64azfpyftzwls2l2t.streamlit.app/)  ·  🎥 **Video:** _coming soon_
+>
+> The demo runs on free hosting: it sleeps after a few idle days (click "wake up" if you see it), and each session is limited to 10 questions to protect the free Gemini quota.
 
 ## Screenshots
 
@@ -103,7 +104,7 @@ pip install -r requirements-dev.txt && pytest
 | `openrouter` | `OPENROUTER_API_KEY` | `:free` models (requires `pip install langchain-openai`) |
 | `ollama` | — | Local (requires `pip install langchain-ollama`) |
 
-`LLM_MODEL` overrides the provider's model. With Gemini, the agent automatically falls back to other models when one hits its quota (`LLM_FALLBACK_MODELS` to customize). Free-tier limits change often: check each provider's page.
+`LLM_MODEL` overrides the provider's model. The Gemini default is `gemini-3.5-flash-lite` (answers in a few seconds; the larger `gemini-3.5-flash` gave better-written answers but took about 2.5 minutes per question on the free tier). With Gemini, the agent automatically falls back to other models when one hits its quota (`LLM_FALLBACK_MODELS` to customize). Free-tier limits change often: check each provider's page.
 
 ## Deploying (Streamlit Community Cloud)
 1. Push the repo to GitHub (the key **never** goes in the code: `.env` and `secrets.toml` are in `.gitignore`).
